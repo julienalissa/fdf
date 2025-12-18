@@ -12,19 +12,12 @@ LIBFT_FLAGS = -L$(LIBFT_DIR) -lft
 
 INCLUDES = -I$(MLX_DIR) -I$(LIBFT_DIR) -Iget_next_line
 
-SRCS =  fdf.c \
-        hooks.c \
-        parcing_map.c \
-        put_line.c \
-        utils.c \
-        get_next_line/get_next_line.c \
-        get_next_line/get_next_line_utils.c
+SRCS =  fdf.c hooks.c parcing_map.c put_line.c utils.c get_next_line/get_next_line.c\
+get_next_line/get_next_line_utils.c
 
 OBJS = $(SRCS:.c=.o)
 
-HEADERS = fdf.h \
-          get_next_line/get_next_line.h \
-          libft/libft.h
+HEADERS = fdf.h get_next_line/get_next_line.h libft/libft.h
 
 all: $(LIBFT) mlx $(NAME)
 
