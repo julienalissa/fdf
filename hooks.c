@@ -49,15 +49,6 @@ int	key_hook(int keycode, t_fdf *fdf)
 	return (0);
 }
 
-void	wrong_arg(int argc)
-{
-	if (argc != 2)
-	{
-		write(2, "need ./fdf map\n", 15);
-		exit(1);
-	}
-}
-
 int	mouse_zoom(int button, int x, int y, t_fdf *fdf)
 {
 	(void)x;

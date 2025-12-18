@@ -24,3 +24,12 @@ void	free_table(char **str)
 	}
 	free(str);
 }
+
+void	wrong_arg(int argc)
+{
+	if (argc != 2)
+	{
+		write(2, "need ./fdf map\n", 15);
+		exit(1);
+	}
+}
