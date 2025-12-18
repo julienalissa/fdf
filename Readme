@@ -1,0 +1,97 @@
+Algorithme de Bresenham : c'est un algo qui utilise des int et qui colorie qu'un seul pixel
+au max.  plus rapide moins beau
+
+Algrithme de xiaolin Wu's line algorithm : c'est un algo qui utilise des float il colorie
+les pixels en fonction de l'espace entre le centre du pixel et la ligne et fait 2 lignes
+au lieu d'une comme celui du bresenham
+
+
+calculer le delta de x et le delta de y
+	delta de x = x1 - x0
+	delta de y = y1 - y0
+
+calculer la pente
+	pente = delta de y / delta de x
+si la pente est superieur a 1 alors qui veut dire superieur a 45 degre alors
+inverser le x et le y pour le caclue de la pente et ne plus avancer de x de 1 mais de y de 1
+	pente = delta de x / delta de y
+
+
+
+
+gcc fdf.c -L minilibx-linux -lmlx -lXext -lX11 -lm
+
+Exemple :
+x0 = 50
+y0 = 50
+
+x1 = 1550
+y1 = 1000
+
+3,7
+4
+
+3,2
+3
+3 4
+
+
+
+Exemple :
+x0 = 0
+y0 = 1
+
+x1 = 5
+y1 = 7
+
+delta de x = 5
+delta de y = 6
+
+pente = 6 / 5 = 1,2
+changemenet de pente
+pente = 5 / 6 = 0,8333333
+
+etape 0 : x0 = 0 y0 = 1
+etape 1 : x0 = 0,8333. y0 = 2
+etape 2 : x0 = 1,6666. y0 = 3
+etape 3 : x0 = 2,4999. y0 = 4
+etape 4 : x0 = 3,3333. y0 = 5
+etape 5 : x0 = 4,1666. y0 = 6
+etape 6 : x0 = 5       y0 = 7
+
+
+
+
+
+Exemple :
+x0 = 1
+y0 = 1
+
+x1 = 5
+y1 = 3
+
+delta de x = x1 - x0
+delta de y = y1 - y0
+
+delta de x = 5 - 1 = 4
+delta de y = 3 - 1 = 2
+
+pente = delta de y / delta de x
+2 / 4 = 0,5
+
+
+x = 1 y = 1
+x = 2 y = x + pente = 1,5
+x = 3 y = 1,5 + 0,5
+x = 4 y = 2 + pente = 2,5
+
+
+Algorithme DDA
+
+couleur
+
+0xAARRGGBB
+
+bits par pixel = 32;
+line_lenght = nb octet dans la ligne;
+
